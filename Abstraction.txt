@@ -1,0 +1,13 @@
+Abstraction is the process of simplifying complex things into something more manageable and straightforward, allowing for progress in a program without requiring an excessive number of lines of code.
+
+The most significant highlight of abstraction is that it allows for the review and visualization of a complex program in a more accessible way. This enables one to learn simply by reading.
+
+The clearest application of abstraction is creating and using different classes within a program, thereby breaking the program down into the specific components we need to develop. For instance, if I want to perform addition, subtraction, and division in a program, I can create a class to handle these operations and then implement it within the main program, where the input values ​​are collected.
+
+Random randomGenerator = new Random();
+        int number = randomGenerator.Next(0, 5);
+        return _prompts[number];
+
+The first line (Random randomGenerator = new Random();) declares and initializes a new instance of the Random class. In C#, this class serves as an abstraction. By instantiating randomGenerator, the program gains access to built-in methods necessary for generating random data.
+The second line (int number = randomGenerator.Next(0, 5);) invokes the . In C#, this method is inclusive of the lower bound but exclusive of the upper bound. Therefore, passing 0 and 5 means the method will randomly produce an integer from the set {0, 1, 2, 3, 4}. This generated value is stored in the integer variable number to act as an array or list index.
+The final line (return _prompts[number];) uses the randomly generated index to retrieve a specific element from the _prompts collection using bracket notation. Since collection indexing starts at zero, the variable number perfectly matches the valid index range for a collection containing at least five elements. The program fetches the item at that position and immediately passes it back as the output of the function. 
