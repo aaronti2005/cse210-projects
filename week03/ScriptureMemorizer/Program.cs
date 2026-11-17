@@ -1,5 +1,5 @@
-// SHOWING CREATIVITY AND EXCEEDING REQUIREMENTS:
-// Add a loop, along with `if` validations, to ensure that the random numbers used to select a word to hide do not pick a word that is already hidden.
+//SHOWING CREATIVITY AND EXCEEDING REQUIREMENTS:
+//I add a loop, along with `if` validations, to ensure that the random numbers used to select a word to hide do not pick a word that is already hidden.
 
 using System;
 
