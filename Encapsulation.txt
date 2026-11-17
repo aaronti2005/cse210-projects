@@ -1,0 +1,4 @@
+Encapsulation is the act of setting specific variables to private, which helps prevent unnecessary changes to a variable's value and ensures better organization when using abstractions, constructs, and methods that interact with those variables.
+
+
+ 
