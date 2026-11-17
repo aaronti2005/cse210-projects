@@ -8,33 +8,33 @@ public class Reference
     private int _endverse;
 
     public Reference(string book, int chapter, int verse)
-        {
-            _book = book;
-            _chapter = chapter;
-            _verse = verse;
+    {
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
 
-        }
+    }
 
     public Reference(string book, int chapter, int startVerse, int endVerse)
-        {
-            _book = book;
-            _chapter = chapter;
-            _verse = startVerse;    
-            _endverse = endVerse;
+    {
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;    
+        _endverse = endVerse;
 
-        }
+    }
 
     public string GetDisplayText()
+    {
+        if (_endverse == 0)
         {
-            if (_endverse == 0)
-            {
-                return $"{_book} {_chapter}:{_verse}";
-            }
-            else
-            {
-                return $"{_book} {_chapter}:{_verse}-{_endverse}";
-            }
-
+            return $"{_book} {_chapter}:{_verse}";
         }
+        else
+        {
+            return $"{_book} {_chapter}:{_verse}-{_endverse}";
+        }
+
+    }
 
 }

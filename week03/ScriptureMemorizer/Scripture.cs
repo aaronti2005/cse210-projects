@@ -4,11 +4,11 @@ public class Scripture
     private Reference _reference;
     private List<Word> _words = new List<Word>();
 
-    public Scripture (Reference Reference, string text)
+    public Scripture(Reference reference, string text)
     {
-        _reference = Reference;
+        _reference = reference;
         string[] w = text.Split(' ');
-        foreach(string wordText in w)
+        foreach (string wordText in w)
         {
             Word newWord = new Word(wordText);
             _words.Add(newWord);
@@ -17,12 +17,12 @@ public class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        List<Word>visibleWords = new List<Word>();
+        List<Word> visibleWords = new List<Word>();
         Random randomGenerator = new Random();
 
-        foreach(Word visible in _words)
+        foreach (Word visible in _words)
         {
-             if (visible.IsHidden() == false)
+            if (visible.IsHidden() == false)
             {
                 visibleWords.Add(visible);
             }
@@ -35,37 +35,37 @@ public class Scripture
             wordsToHide = visibleWords.Count;
         }
 
-        for (int h = 0; h < wordsToHide; h++ )
+        for (int h = 0; h < wordsToHide; h++)
         {
             int number = randomGenerator.Next(0, visibleWords.Count);
 
             visibleWords[number].Hide();
             visibleWords.RemoveAt(number);
         }
-        
+
     }
 
     public string GetDisplayText()
     {
-        string DisplayText = _reference.GetDisplayText() + " ";
-        foreach(Word word in _words)
+        string displayText = _reference.GetDisplayText() + " ";
+        foreach (Word word in _words)
         {
-           DisplayText += word.GetDisplayText() + " ";
+            displayText += word.GetDisplayText() + " ";
         }
 
-        return DisplayText;
+        return displayText;
     }
 
     public bool IsCompletelyHidden()
     {
-        foreach(Word word in _words)
+        foreach (Word word in _words)
         {
-           if (word.IsHidden() == false)
+            if (word.IsHidden() == false)
             {
                 return false;
             }
         }
         return true;
-        
+
     }
 }

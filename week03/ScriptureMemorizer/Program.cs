@@ -11,10 +11,10 @@ class Program
         string text = "Trust in the Lord with all thine heart and lean not unto thine own understanding; in all thy ways acknowledge him, and he shall direct thy paths.";
 
         Scripture scripture = new Scripture(reference, text);
-        
+
         string userInput = "";
 
-         while (userInput != "quit")
+        while (userInput != "quit" && userInput != "Quit")
         {
             Console.Clear();
             Console.WriteLine(scripture.GetDisplayText());
@@ -31,8 +31,8 @@ class Program
             {
                 scripture.HideRandomWords(3);
             }
-            
+
         }
-        
+
     }
 }
